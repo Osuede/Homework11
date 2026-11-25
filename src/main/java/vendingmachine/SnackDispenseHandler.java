@@ -3,8 +3,10 @@ package vendingmachine;
 /**
  * One handler in the dispensing chain (Chain of Responsibility).
  *
- * Each handler is in charge of one snack. When a request comes in, the handler checks
- * whether it is for its snack. If it is, the handler dispenses one, or reports that it is
+ * Each handler is in charge of one snack. When a request comes in, the handler
+ * checks
+ * whether it is for its snack. If it is, the handler dispenses one, or reports
+ * that it is
  * sold out. If it is not, the handler passes the request to the next handler.
  */
 public class SnackDispenseHandler {
@@ -19,16 +21,10 @@ public class SnackDispenseHandler {
         this.snack = snack;
     }
 
-    /** Sets the handler that gets every request this handler is not in charge of. */
     public void setNext(SnackDispenseHandler next) {
         this.next = next;
     }
 
-    /**
-     * Dispenses one of the named snack, using whichever handler in the chain is in charge of it.
-     *
-     * @return true if a snack came out, false if it is sold out or no handler in the chain sells it
-     */
     public boolean dispense(String snackName) {
         // Not my snack: let the next handler deal with it.
         if (!snack.getName().equals(snackName)) {
