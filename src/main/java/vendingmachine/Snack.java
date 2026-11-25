@@ -1,7 +1,8 @@
 package vendingmachine;
 
 /**
- * One kind of snack in the vending machine: its name, its price, and how many are left.
+ * One kind of snack in the vending machine: its name, its price, and how many
+ * are left.
  */
 public class Snack {
 
